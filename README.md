@@ -29,7 +29,8 @@ The ti.andsmsverification variable is a reference to the Module object.
 	1. onSMSReceive
 
 ## Usage
-It's work on everywhere.
+It need to sms sending feature in your api server.
+(twillio is easy)
 
     var ASV = require('ti.andsmsverification');
     // check permission
@@ -56,6 +57,8 @@ It's work on everywhere.
       var ASV = require('ti.andsmsverification');
       var mobileNumber = ASV.getMobileNumber();
       Ti.API.debug("getMobileNumber :", mobileNumber);
+      
+      // sending sms using api server
       ...
     }
 
@@ -64,6 +67,8 @@ It's work on everywhere.
       var ASV = require('ti.andsmsverification');
       ASV.addEventListener("onSMSReceive", function(e) {
         Ti.API.debug("onSMSReceive :", e);
+        
+        // check & parsing sms message
         ...
       });
     }
