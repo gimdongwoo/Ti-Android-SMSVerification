@@ -4,6 +4,8 @@
 
 Get mobile number & Receive SMS Message
 
+- v0.2.0 for Ti SDK 5.4.0.GA+ / v0.1.0 for Ti SDK 5.1.0.GA~5.3.1.GA
+
 ## Accessing the Module
 
 To access this module from JavaScript, you would do the following:
