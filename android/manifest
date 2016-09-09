@@ -2,7 +2,7 @@
 # this is your module manifest and used by Titanium
 # during compilation, packaging, distribution, etc.
 #
-version: 0.1.0
+version: 0.2.0
 apiversion: 2
 architectures: armeabi armeabi-v7a x86
 description: Ti-Android-SMSVerification
@@ -15,4 +15,4 @@ name: Ti-Android-SMSVerification
 moduleid: ti.andsmsverification
 guid: a6271761-5bf6-4526-b051-9c9c280c86fd
 platform: android
-minsdk: 5.1.0.GA
+minsdk: 5.4.0.GA

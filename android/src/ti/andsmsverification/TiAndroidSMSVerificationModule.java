@@ -36,6 +36,7 @@ public class TiAndroidSMSVerificationModule extends KrollModule
 	// Standard Debugging variables
 	private static final String LCAT = "TiAndroidSMSVerificationModule";
 	private static final boolean DBG = TiConfig.LOGD;
+	private static final int REQUEST_CODE = 999;
 
 	// You can define constants with @Kroll.constant, for example:
 	// @Kroll.constant public static final String EXTERNAL_NAME = value;
@@ -114,13 +115,9 @@ public class TiAndroidSMSVerificationModule extends KrollModule
 	        permissions = new String[] {Manifest.permission.RECEIVE_SMS};
 		}
 
-		if (TiBaseActivity.contactsCallbackContext == null) {
-			TiBaseActivity.contactsCallbackContext = getKrollObject();
-		}
-		TiBaseActivity.contactsPermissionCallback = permissionCallback;
-
 		Activity currentActivity  = TiApplication.getInstance().getCurrentActivity();
-		currentActivity.requestPermissions(permissions, TiC.PERMISSION_CODE_CONTACTS);
+		TiBaseActivity.registerPermissionRequestCallback(REQUEST_CODE, permissionCallback, getKrollObject());
+		currentActivity.requestPermissions(permissions, REQUEST_CODE);
 	}
 	
 	@Kroll.method
