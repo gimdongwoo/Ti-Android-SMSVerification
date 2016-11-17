@@ -1,4 +1,4 @@
-<project name="ti-android-smsverification" default="dist">
+<project name="tiandroidsmsverification" default="dist">
 	<description>
 		Ant build script for Titanium Android module Ti-Android-SMSVerification
 	</description>
